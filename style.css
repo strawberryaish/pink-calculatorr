@@ -8,6 +8,10 @@
   font-family: Inter;
   src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
 }
+@font-face {
+  font-family: Digital;
+  src: url(fonts//digital-7.ttf);
+}
 :root {
   --color-primary: #d0738b;
   --color-pink-1: #fde6e9;
@@ -59,12 +63,12 @@ body {
   font-weight: 500;
 }
 .calculator .result-inner {
+  font-family: "Digital", sans-serif;
   width: 100%;
   border-radius: 5px;
-  padding: 0.6rem;
   padding-right: 1rem;
   background-color: var(--color-neutral-1);
-  font-size: 5rem;
+  font-size: 8rem;
   color: var(--color-dark-3);
   text-align: right;
 }
