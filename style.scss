@@ -1,0 +1,161 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+    --color-primary: #d0738b;
+    --color-pink-1: #fde6e9;
+    --color-pink-2: #fbd0d9;
+    --color-pink-3: #f27a93;
+    --color-pink-4: #f0bedb;
+    --color-pink-5: #f0587d;
+
+    --color-dark: #951c45;
+    --color-dark-2: #801b40;
+    --color-dark-3: #470a1f;
+
+    --color-neutral-1: #d0d2d4;
+    --color-neutral-2: #626363;
+    --color-neutral-3: 
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background:  linear-gradient(to right, var(--color-pink-3) 36%, var(--color-primary) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 320rem;
+    background-color: var(--color-pink-2);
+    box-shadow: 0.8rem 0.5rem 0.1rem var(--color-dark);
+
+    .grid-span {
+        grid-row: 4/span 2;
+        grid-column: 5/6;
+        
+    }
+
+    .result {
+    padding: 2rem 2.5rem;
+
+        background-color: var(--color-primary);
+
+        h3 {
+            font-size: 2rem;
+            color: var(--color-pink-1);
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        &-inner {
+            width: 100%;
+            border-radius: 5px;
+            padding: 0.6rem;
+            padding-right: 1rem;
+            background-color: var(--color-neutral-1);
+            font-size: 5rem;
+            color: var(--color-dark-3);
+            text-align: right;
+        }
+    }
+
+    .box {
+        
+        background-color: var(--color-pink-4);
+        padding: 3.5rem 2rem;
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(5,1fr);
+    }
+
+    .btn {
+        font-size: 2rem;
+        border: none;
+        padding: 0.3rem;
+        border:1px solid var(--color-pink-3);
+        box-shadow: 0.3rem 0.3rem 0.1rem var(--color-dark);
+        border-radius: 5px;
+        color: var(--color-neutral-2);
+        cursor: pointer;
+
+        &-symbol {
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 0.3s;
+
+            
+            &-sign {
+                font-size: 3rem;
+               
+                
+            }
+
+            &:hover {
+            background-color: var(--color-pink-5);
+            color: #fff;
+
+            }
+
+            &:active {
+            background-color: #fff;
+            color: var(--color-neutral-2);
+            }
+            
+
+        }
+
+        &-number {
+            padding: 0.8rem;
+            background-color: var(--color-pink-5);
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            transition: all 0.3s;
+
+            &:last-child {
+                font-size: 2.3rem;
+            }
+
+            &:hover {
+                background-color: #fff;
+                color: var(--color-neutral-2);
+                }
+
+            &:active {
+                background-color: var(--color-pink-5);
+                color: #fff;
+            }
+    
+           
+        }
+
+        
+        &-switch {
+            background-color: var(--color-primary);
+            color: #fff;
+           
+        }
+    }
+
+
+    
+}
